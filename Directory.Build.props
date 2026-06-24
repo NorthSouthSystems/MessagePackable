@@ -3,6 +3,7 @@
     <Sdk Name="NorthSouthSystems.NET.Sdk" Version="9.0.1"/>
 
     <ItemGroup>
+        <Using Include="NorthSouthSystems.Text"/>
         <Using Include="System"/>
         <Using Include="System.Collections"/>
         <Using Include="System.Collections.Generic"/>
