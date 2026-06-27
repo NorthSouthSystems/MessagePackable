@@ -33,14 +33,13 @@ public class MessagePackRpcClient(HttpClient client)
             .ReadAsStreamAsync(cancellationToken)
             .ConfigureAwait(false);
 
-        await using (responseStream.ConfigureAwait(false))
-        {
-            var response = await MessagePackRpc.GetMessagePackSerializer<TResponse>()
-                .DeserializeAsync<TResponse>(responseStream, cancellationToken)
-                .ConfigureAwait(false);
+        await using var _ = responseStream.ConfigureAwait(false);
 
-            return response!;
-        }
+        var response = await MessagePackRpc.GetMessagePackSerializer<TResponse>()
+            .DeserializeAsync<TResponse>(responseStream, cancellationToken)
+            .ConfigureAwait(false);
+
+        return response!;
     }
 
     private class SerializerContent<T>(T t) : HttpContent where T : IShapeable<T>
