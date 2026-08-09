@@ -1,4 +1,4 @@
-﻿// T4-generated @ 2026-06-24 03:05:50 UTC
+﻿// T4-generated @ 2026-08-09 17:25:30 UTC
 #nullable enable
 
 using System.Diagnostics.CodeAnalysis;
@@ -428,3 +428,4 @@ internal static class TypeX
         }
     }
 }
+
