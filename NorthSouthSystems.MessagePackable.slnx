@@ -1,18 +1,19 @@
 <Solution>
     <Folder Name="/_/">
-        <File Path=".editorconfig"/>
-        <File Path=".gitattributes"/>
-        <File Path=".github/workflows/BuildTestAnalyze.yml"/>
-        <File Path=".github/workflows/BuildTestPackagePublish.yml"/>
-        <File Path=".gitignore"/>
-        <File Path="Directory.Build.props"/>
-        <File Path="Directory.Packages.props"/>
-        <File Path="Icon.png"/>
-        <File Path="LICENSE"/>
-        <File Path="nuget.config"/>
-        <File Path="README.md"/>
-        <File Path="version.json"/>
+        <File Path=".editorconfig" />
+        <File Path=".gitattributes" />
+        <File Path=".github/workflows/BuildTestAnalyze.yml" />
+        <File Path=".github/workflows/BuildTestPackagePublish.yml" />
+        <File Path=".gitignore" />
+        <File Path="Directory.Build.props" />
+        <File Path="Directory.Packages.props" />
+        <File Path="global.json" />
+        <File Path="Icon.png" />
+        <File Path="LICENSE" />
+        <File Path="nuget.config" />
+        <File Path="README.md" />
+        <File Path="version.json" />
     </Folder>
-    <Project Path="NorthSouthSystems.MessagePackable.Tests/NorthSouthSystems.MessagePackable.Tests.csproj"/>
-    <Project Path="NorthSouthSystems.MessagePackable/NorthSouthSystems.MessagePackable.csproj"/>
+    <Project Path="NorthSouthSystems.MessagePackable.Tests/NorthSouthSystems.MessagePackable.Tests.csproj" />
+    <Project Path="NorthSouthSystems.MessagePackable/NorthSouthSystems.MessagePackable.csproj" />
 </Solution>
