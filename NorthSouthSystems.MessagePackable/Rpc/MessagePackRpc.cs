@@ -119,10 +119,12 @@ internal static class MessagePackRpcHelpers
         }
 
         if (constructedGenericAttribute is null)
+        {
             throw new ArgumentException(
                 string.Create(
                     InvariantCulture,
                     $"Type must be decorated with {nameof(MessagePackRpcConstructedGenericAttribute)}."));
+        }
 
         ArgumentExceptionX.ThrowIfAny(
             constructedGenericAttribute.ConstructedGenericTypes.Where(cgt => !cgt.IsSubTypeOfGeneric(type)));
