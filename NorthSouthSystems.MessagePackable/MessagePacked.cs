@@ -22,7 +22,7 @@ public class MessagePacked<T> : MessagePacked
 
 public class MessagePacked
 {
-    protected private MessagePacked(ImmutableArray<byte> bytes)
+    private protected MessagePacked(ImmutableArray<byte> bytes)
     {
         if (bytes.IsDefault)
             throw new ArgumentException("Cannot be default ImmutableArray.", nameof(bytes));

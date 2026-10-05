@@ -3,7 +3,11 @@
 namespace NorthSouthSystems.MessagePackable;
 
 public sealed record MessagePackRpcRegistration(
-    Type RpcType, string SubPath, Type RequestType, Type ResponseType, ImmutableArray<string> Roles);
+    Type RpcType,
+    string SubPath,
+    Type RequestType,
+    Type ResponseType,
+    ImmutableArray<string> Roles);
 
 public sealed class MessagePackRpcRegistry(params IEnumerable<Assembly> assemblies)
 {

@@ -14,7 +14,8 @@ public static class MessagePackableX
 {
 #pragma warning disable CA1000 // Static members on generic types is the desired design.
 #pragma warning disable CA1034 // False positive; analyzer bug for C# 14.
-    extension<T>(T) where T : IMessagePackable, IShapeable<T>
+    extension<T>(T)
+        where T : IMessagePackable, IShapeable<T>
     {
         public static T? FromMessagePack(byte[] bytes, CancellationToken token = default) =>
             T.MessagePack.Deserialize<T>(bytes, token);
@@ -26,7 +27,8 @@ public static class MessagePackableX
             T.MessagePack.Deserialize<T>(stream, token);
     }
 
-    extension<T>(T t) where T : IMessagePackable, IShapeable<T>
+    extension<T>(T t)
+        where T : IMessagePackable, IShapeable<T>
     {
         public ImmutableArray<byte> ToMessagePack(CancellationToken token = default) =>
             ImmutableCollectionsMarshal.AsImmutableArray(T.MessagePack.Serialize(t, token));

@@ -38,11 +38,16 @@ public abstract class MessagePackRpc<TSelf, TRequest, TResponse>
     where TRequest : IShapeable<TRequest>
     where TResponse : IShapeable<TResponse>
 {
-    public static Task<TResponse> ExecuteRemotelyAsync(MessagePackRpcClient client,
-        TRequest request, CancellationToken cancellationToken) =>
+    public static Task<TResponse> ExecuteRemotelyAsync(
+        MessagePackRpcClient client,
+        TRequest request,
+        CancellationToken cancellationToken) =>
         Throw.IfNull(client).ExecuteAsync<TSelf, TRequest, TResponse>(request, cancellationToken);
 
-    public async Task ExecuteLocallyAsync(Stream requestStream, Stream responseStream, CancellationToken cancellationToken)
+    public async Task ExecuteLocallyAsync(
+        Stream requestStream,
+        Stream responseStream,
+        CancellationToken cancellationToken)
     {
         Throw.IfNull(requestStream);
         Throw.IfNull(responseStream);
@@ -107,11 +112,17 @@ internal static class MessagePackRpcHelpers
         {
             return constructedGenericAttribute is null
                 ? [type]
-                : throw new ArgumentException(string.Create(InvariantCulture, $"Type should not be decorated with {nameof(MessagePackRpcConstructedGenericAttribute)}."));
+                : throw new ArgumentException(
+                    string.Create(
+                        InvariantCulture,
+                        $"Type should not be decorated with {nameof(MessagePackRpcConstructedGenericAttribute)}."));
         }
 
         if (constructedGenericAttribute is null)
-            throw new ArgumentException(string.Create(InvariantCulture, $"Type must be decorated with {nameof(MessagePackRpcConstructedGenericAttribute)}."));
+            throw new ArgumentException(
+                string.Create(
+                    InvariantCulture,
+                    $"Type must be decorated with {nameof(MessagePackRpcConstructedGenericAttribute)}."));
 
         ArgumentExceptionX.ThrowIfAny(
             constructedGenericAttribute.ConstructedGenericTypes.Where(cgt => !cgt.IsSubTypeOfGeneric(type)));
