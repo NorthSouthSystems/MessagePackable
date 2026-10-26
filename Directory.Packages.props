@@ -12,6 +12,7 @@
         <PackageVersion Include="Nerdbank.MessagePack" Version="1.4.82" />
         <!-- NorthSouthSystems.Opinions.BCL: Run the T4 template to update! -->
         <PackageVersion Include="NorthSouthSystems.Text" Version="8.0.1" />
+        <PackageVersion Include="NuGet.Protocol" Version="7.9.0" />
         <PackageVersion Include="System.IO.Hashing" Version="10.0.12" />
         <PackageVersion Include="xunit.v3" Version="4.0.1" />
 
