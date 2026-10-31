@@ -3,7 +3,7 @@
         <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
         <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
 
-        <DotNetVersion>10.0.13</DotNetVersion>
+        <DotNetVersion>10.0.14</DotNetVersion>
     </PropertyGroup>
 
     <ItemGroup>
