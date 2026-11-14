@@ -10,7 +10,7 @@ try
 
     string solutionDirectory = Helpers.CrawlToRepositoryRoot();
     string destinationDirectory = Path.Combine(solutionDirectory, "NorthSouthSystems.MessagePackable");
-    string destinationFilePath = Path.Combine(destinationDirectory, "NorthSouthSystems.Opinions.BCL.generated.cs");
+    string destinationFilePath = Path.Combine(destinationDirectory, "_NorthSouthSystems.Opinions.BCL.vendored.cs");
     
     string vendored = await NorthSouthSystems.Opinions.BCL.VendorFiles.DownloadAndMergeAsync(
         "NorthSouthSystems.MessagePackable",
