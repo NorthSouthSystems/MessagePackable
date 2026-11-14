@@ -1,6 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <ItemGroup>
+        <!-- DO NOT REFERENCE NorthSouthSystems.Opinions.BCL; See scripts/VendorOpinionsBCL instead. -->
+    </ItemGroup>
+
+    <ItemGroup>
         <ProjectReference Include="..\NorthSouthSystems.MessagePackable\NorthSouthSystems.MessagePackable.csproj"/>
     </ItemGroup>
 
